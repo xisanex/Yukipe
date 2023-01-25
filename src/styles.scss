@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --primary-color: #0a9396;
+  --secondary-color: #e9d8a6;
+  --footer-color: #156064;
+  --text-color: #fff;
+  --nav-height:60px;
+}

@@ -1,0 +1,35 @@
+.menu {
+  position: fixed;
+  width: 100%;
+  height: var(--nav-height);
+  font-size: 30px;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  &__logo {
+    margin-left: 2rem;
+  }
+  &__brand-name {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .menu__item {
+      align-items: center;
+      list-style: none;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+}

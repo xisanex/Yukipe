@@ -10,9 +10,13 @@
 }
 
 :root {
-  --primary-color: #0a9396;
-  --secondary-color: #e9d8a6;
-  --footer-color: #156064;
-  --text-color: #fff;
+  --primary-color: rgb(10, 147, 150);
+  --secondary-color: rgb(233, 216, 166);
+  --first-subsection-color: rgba(202, 103, 2, 0.51);
+  --shadow-color: rgb(187, 62, 3);
+  --footer-color: rgb(21, 96, 100);
+  
+  --text-color: rgb(255, 255, 255);
   --nav-height: 60px;
+
 }

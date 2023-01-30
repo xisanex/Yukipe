@@ -1,0 +1,92 @@
+:root {
+  --color: black;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin btn {
+  width: 250px;
+  height: 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 100vh;
+  color: white;
+}
+
+.background {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  justify-content: center;
+  margin-top: var(--nav-height);
+  background: url(manSnow.jpg);
+  background-repeat: no-repeat;
+  background-position: center 1vh;
+  background-attachment: fixed;
+  background-size: auto;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-auto-flow: dense;
+  align-self: center;
+  width: 800px;
+  height: 500px;
+}
+
+.col1 {
+  @include flex-column();
+  font-weight: 700;
+  background-color: #f79d65bf;
+  color: var(--text-color);
+  &__greeting {
+    font-size: 2.2rem;
+    margin-top: 60px;
+  }
+  &__text {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  &__btn {
+    @include btn();
+    margin-bottom: 60px;
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+  }
+}
+
+.col2 {
+  @include flex-column();
+  background-color: rgba(239, 239, 239, 1);
+  &__header {
+    margin-top: 50px;
+    font-size: 2rem;
+  }
+  &__btn {
+    @include btn();
+    background-color: #f79d65bf;
+    width: 200px;
+    margin-bottom: 30px;
+  }
+}
+
+.form {
+  @include flex-column();
+  &__input {
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+  }
+
+  &__input::placeholder {
+    font-weight: bold;
+    color: black;
+    text-align: left;
+  }
+}

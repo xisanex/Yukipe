@@ -1,6 +1,3 @@
-:root {
-  --color: black;
-}
 @mixin flex-column {
   display: flex;
   flex-direction: column;
@@ -15,6 +12,9 @@
   font-weight: 700;
   border-radius: 100vh;
   color: white;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
 }
 
 .background {
@@ -31,19 +31,32 @@
 }
 
 .panel {
-  display: grid;
-  grid-template-columns: 1.5fr 2fr;
-  grid-auto-flow: dense;
-  align-self: center;
+  position: relative;
+  z-index: 0;
   width: 800px;
   height: 500px;
 }
 
 .col1 {
   @include flex-column();
+
+  width: 350px;
   font-weight: 700;
   background-color: #f79d65bf;
   color: var(--text-color);
+  &--left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  &--right {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
   &__greeting {
     font-size: 2.2rem;
     margin-top: 60px;
@@ -57,16 +70,38 @@
     margin-bottom: 60px;
     background-color: transparent;
     border: 2px solid var(--text-color);
+    &:hover {
+      transition-duration: 0.1s;
+      background-color: #3a3a3a;
+    }
+    // &:after {
+    //   content: '';
+    //   border-radius: 4em;
+    //   width: 100%;
+    //   height: 100%;
+    //   transition: all 0.5s;
+    //   box-shadow: 0 0 10px 40px white;
+    // }
+    &:active {
+      transform: scale(1.1);
+    }
   }
 }
 
 .col2 {
   @include flex-column();
+  position: absolute;
+  left: 350px;
+  width: 450px;
+  top: 0;
+  bottom: 0;
   background-color: rgba(239, 239, 239, 1);
+
   &__header {
     margin-top: 50px;
     font-size: 2rem;
   }
+
   &__btn {
     @include btn();
     background-color: #f79d65bf;
@@ -77,6 +112,7 @@
 
 .form {
   @include flex-column();
+
   &__input {
     margin: 20px 0 20px 0;
     padding: 10px;
@@ -88,5 +124,16 @@
     font-weight: bold;
     color: black;
     text-align: left;
+  }
+}
+
+@keyframes move-block {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    right: 0;
   }
 }

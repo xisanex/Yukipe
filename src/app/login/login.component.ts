@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Animations } from './animations';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  // animations: [trigger('openClose'), [state('open', style({})), state('closed',style({}))]],
+  animations: [Animations.animTrigger, Animations.animFormTrigger, Animations.animSwipe],
 })
-export class LoginComponent {}
+export class LoginComponent {
+  isIn = true;
+  toggle() {
+    this.isIn = !this.isIn;
+  }
+}

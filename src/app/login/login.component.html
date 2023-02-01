@@ -1,16 +1,16 @@
 <div class="background">
   <div class="panel">
-    <div class="col1 col1--left">
+    <div class="col1 col1--left" [@animTrigger]="isIn ? 'in' : 'out'">
       <h2 class="col1__greeting">Welcome back!</h2>
       <span class="col1__text">No account? <br />Sign up!</span>
-      <button class="col1__btn">Sign up</button>
+      <button class="col1__btn" (click)="toggle()">Sign up</button>
     </div>
-    <div class="col1 col1--right">
+    <div class="col1 col1--right" [@animSwipe]="isIn ? 'in' : 'out'">
       <h2 class="col1__greeting">Welcome!</h2>
       <span class="col1__text">Already have an account? <br />Sign in!</span>
       <button class="col1__btn">Sign in</button>
     </div>
-    <div class="col2 col2--right">
+    <div class="col2 col2--right" [@animFormTrigger]="isIn ? 'in' : 'out'">
       <h2 class="col2__header">Sign in to Yukipe</h2>
       <form class="form" action="">
         <label for="email"></label>

@@ -36,23 +36,23 @@
   width: 800px;
   height: 500px;
   border: 1px solid red;
+  background-color: rgba(239, 239, 239, .5);
 }
 
 .col1 {
   @include flex-column();
+  position: absolute;
   z-index: 2;
   width: var(--col-auth-width);
   font-weight: 700;
   background-color: #f79d65bf;
   color: var(--text-color);
   &--left {
-    position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
   }
   &--right {
-    position: absolute;
     z-index: 1;
     right: 0;
     top: 0;
@@ -92,11 +92,18 @@
 .col2 {
   @include flex-column();
   position: absolute;
-  left: 350px;
+
   width: var(--col-form-width);
   top: 0;
   bottom: 0;
   background-color: rgba(239, 239, 239, 1);
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
+    z-index: -1;
+  }
 
   &__header {
     margin-top: 50px;

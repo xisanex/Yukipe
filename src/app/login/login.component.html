@@ -20,5 +20,15 @@
       </form>
       <button type="submit" class="col2__btn">Sign in</button>
     </div>
+    <div class="col2 col2--left" [@animFormTrigger2]="isIn ? 'in' : 'out'">
+      <h2 class="col2__header">Create Account</h2>
+      <form class="form" action="">
+        <label for="email"></label>
+        <input class="form__input" type="text" name="email" id="email" placeholder="Email" />
+        <label for="password"></label>
+        <input class="form__input" type="text" name="password" id="password" placeholder="Password" />
+      </form>
+      <button type="submit" class="col2__btn">Sign in</button>
+    </div>
   </div>
 </div>

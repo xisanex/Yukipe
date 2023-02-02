@@ -36,28 +36,28 @@
   width: 800px;
   height: 500px;
   border: 1px solid red;
-  background-color: rgba(239, 239, 239, .5);
+  background-color: rgba(239, 239, 239, 0.5);
 }
 
 .col1 {
   @include flex-column();
   position: absolute;
   z-index: 2;
+  top: 0;
+  bottom: 0;
   width: var(--col-auth-width);
   font-weight: 700;
   background-color: #f79d65bf;
   color: var(--text-color);
+
   &--left {
     left: 0;
-    top: 0;
-    bottom: 0;
   }
+
   &--right {
-    z-index: 1;
     right: 0;
-    top: 0;
-    bottom: 0;
   }
+
   &__greeting {
     font-size: 2.2rem;
     margin-top: 60px;
@@ -92,20 +92,21 @@
 .col2 {
   @include flex-column();
   position: absolute;
-
-  width: var(--col-form-width);
+  z-index: 1;
   top: 0;
   bottom: 0;
+  width: var(--col-form-width);
   background-color: rgba(239, 239, 239, 1);
   &--left {
+    opacity: 1;
     left: 0;
   }
   &--right {
     right: 0;
-    z-index: -1;
   }
 
   &__header {
+    opacity: 1;
     margin-top: 50px;
     font-size: 2rem;
   }

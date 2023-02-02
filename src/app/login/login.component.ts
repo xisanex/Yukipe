@@ -4,7 +4,7 @@ import { Animations } from './animations';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  animations: [Animations.animTrigger, Animations.animFormTrigger, Animations.animFormTrigger2, Animations.animSwipe],
+  animations: [Animations.moveToRightLeft, Animations.opacityAnim, Animations.opacityAnim2],
 })
 export class LoginComponent {
   isIn = true;

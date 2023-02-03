@@ -5,19 +5,19 @@ export const Animations = {
     state(
       'in',
       style({
-        opacity: 1,
-        left: 0,
-      })
+        left: '{{startPoint}}px',
+      }),
+      { params: { startPoint: 0 } }
     ),
     state(
       'out',
       style({
-        opacity: 0,
         left: '{{moveBy}}px',
       }),
-      { params: { moveBy: '450' } }
+      { params: { moveBy: '650' } }
     ),
-    transition('in <=>out', animate('1s')),
+    transition('in <=>out', animate('{{time}}s linear')),
+    
   ]),
 
   opacityAnim2: trigger('opacityAnim', [
@@ -33,7 +33,7 @@ export const Animations = {
         opacity: 1,
       })
     ),
-    transition('in<=>out', animate('1s')),
+    transition('in<=>out', animate('1s 1s')),
   ]),
 
   opacityAnim: trigger('opacityAnim', [

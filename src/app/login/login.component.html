@@ -1,6 +1,23 @@
 <div class="background">
   <div class="panel">
-    <div class="col1 col1--left" [@moveToRightLeft]="isIn ? 'in' : 'out'">
+    <div class="panel__move--both" [@moveToRightLeft]="{ value: isIn ? 'in' : 'out', params: { time: 1 } }"></div>
+    <div
+      class="panel__move--left"
+      [@moveToRightLeft]="{ value: isIn ? 'in' : 'out', params: { startPoint: -350, moveBy: 0, time: 0.5 } }"
+    ></div>
+    <div class="panel__col">
+      <div class="col col--left">
+        <h2 class="col__greeting">Welcome back!</h2>
+        <span class="col__text">No account? <br />Sign up!</span>
+        <button class="col__btn" (click)="toggle()">Sign up</button>
+      </div>
+      <div class="col col--right">
+        <h2 class="col__greeting">Welcome!</h2>
+        <span class="col__text">Already have an account? <br />Sign in!</span>
+        <button class="col__btn" (click)="toggle()">Sign in</button>
+      </div>
+    </div>
+    <!-- <div class="col1 col1--left" [@moveToRightLeft]="isIn ? 'in' : 'out'">
       <h2 class="col1__greeting">Welcome back!</h2>
       <span class="col1__text">No account? <br />Sign up!</span>
       <button class="col1__btn" (click)="toggle()">Sign up</button>
@@ -32,6 +49,6 @@
         <input class="form__input" type="text" name="password" id="password" placeholder="Password" />
       </form>
       <button type="submit" class="col2__btn">Sign up</button>
-    </div>
+    </div> -->
   </div>
 </div>

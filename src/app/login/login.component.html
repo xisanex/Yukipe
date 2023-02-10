@@ -1,10 +1,10 @@
 <div class="background">
   <div class="panel">
     <div class="panel__move--both" [@moveToRightLeft]="{ value: isIn ? 'in' : 'out', params: { time: 1 } }"></div>
-    <div
+    <!-- <div
       class="panel__move--left"
       [@moveToRightLeft]="{ value: isIn ? 'in' : 'out', params: { startPoint: -350, moveBy: 0, time: 0.5 } }"
-    ></div>
+    ></div> -->
     <div class="panel__col">
       <div class="col col--left">
         <h2 class="col__greeting">Welcome back!</h2>
@@ -16,6 +16,17 @@
         <span class="col__text">Already have an account? <br />Sign in!</span>
         <button class="col__btn" (click)="toggle()">Sign in</button>
       </div>
+    </div>
+    <!-- <div class="panel__"></div> -->
+    <div class="col2 col2--right" [@reveropacityAnim]="isIn ? 'in' : 'out'">
+      <h2 class="col2__header">Sign in to Yukipe</h2>
+      <form class="form" action="">
+        <label for="email"></label>
+        <input class="form__input" type="text" name="email" id="email" placeholder="Email" />
+        <label for="password"></label>
+        <input class="form__input" type="text" name="password" id="password" placeholder="Password" />
+      </form>
+      <button type="submit" class="col2__btn">Sign in</button>
     </div>
     <!-- <div class="col1 col1--left" [@moveToRightLeft]="isIn ? 'in' : 'out'">
       <h2 class="col1__greeting">Welcome back!</h2>

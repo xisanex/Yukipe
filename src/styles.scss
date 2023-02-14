@@ -8,16 +8,21 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+body {
+  position: relative;
+  height: 100%;
+}
 
 :root {
   --primary-color: rgb(10, 147, 150);
   --secondary-color: rgba(242, 228, 187, 1);
   --first-subsection-color: rgba(216, 168, 119, 1);
-  --second-subsection-color:rgba(106, 190, 192, 1);
+  --second-subsection-color: rgba(106, 190, 192, 1);
   --shadow-color: rgb(187, 62, 3);
   --footer-color: rgb(21, 96, 100);
+  --dark-torquoise: rgb(21, 96, 100);
 
-  --text-color: rgb(255, 255, 255);
+  --white: rgb(255, 255, 255);
   --nav-height: 60px;
   --login-panel-width: 1000px;
   --col-auth-width: 350px;

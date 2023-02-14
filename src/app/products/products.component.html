@@ -1,1 +1,28 @@
-<p>products works!</p>
+<div class="wrapper">
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item">Skis</li>
+      <li class="menu__item">Snowboard</li>
+      <li class="menu__item">Gloves</li>
+      <li class="menu__item">Helmet</li>
+      <li class="menu__item">Goggles</li>
+      <li class="menu__item">All</li>
+    </ul>
+  </nav>
+  <div class="dropdown">
+    <select name="demo" id="#">
+      <option selected="selected" value="one">Name:A-Z</option>
+      <option value="two">Name:Z-A</option>
+      <option value="three">Price:Low to high</option>
+      <option value="four">Price:High to low</option>
+    </select>
+  </div>
+  <div class="products">
+    <div class="products__item" *ngFor="let product of listOfProductsService.products">
+      <img src="product.imagePath" alt="" class="item__image" />
+      <span class="item__category">{{ product.category }}</span>
+      <span class="item__brand"></span>
+      <span class="item__pice"></span>
+    </div>
+  </div>
+</div>

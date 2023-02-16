@@ -7,6 +7,8 @@
       <li class="menu__item">Helmet</li>
       <li class="menu__item">Goggles</li>
       <li class="menu__item">All</li>
+      <input type="text" class="menu__input" />
+      <button class="input__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
     </ul>
   </nav>
   <div class="dropdown">
@@ -18,11 +20,16 @@
     </select>
   </div>
   <div class="products">
-    <div class="products__item" *ngFor="let product of listOfProductsService.products">
-      <img src="product.imagePath" alt="" class="item__image" />
-      <span class="item__category">{{ product.category }}</span>
-      <span class="item__brand"></span>
-      <span class="item__pice"></span>
+    <div class="products__items" *ngFor="let product of listOfProductsService.products">
+      <img src="{{ product.imagePath }}" alt="" class="item item__image" />
+      <span class="item item__category">{{ product.category }}</span>
+      <span class="item item__brand">{{ product.brandName }}</span>
+      <span class="item item__pice">{{ product.price }}$</span>
     </div>
+  </div>
+  <div class="pages">
+    <button class="pages__btn pages__btn--left"><i class="fa-solid fa-arrow-right"></i></button>
+    <span class="pages__counter">1/10</span>
+    <button class="pages__btn pages__btn--right" type="button"><i class="fa-solid fa-arrow-right"></i></button>
   </div>
 </div>

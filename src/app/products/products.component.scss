@@ -1,40 +1,112 @@
+@mixin centerFlex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// @mixin boxShadowStyling($color, ){
+//   background-color: $color;
+//   border-radius:100vh;
+//   box-shadow: ;
+// }
+
 .wrapper {
-  min-height: 100vh;
-  width: 100%;
   position: relative;
+  width: 100%;
+  min-height: 200vh;
   margin-top: var(--nav-height);
 }
 
 .menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  line-height: 60px;
   height: 60px;
-  width: 500px;
+  width: 950px;
   margin: 100px auto;
   color: var(--white);
   background-color: rgba(209, 73, 91, 1);
   border-radius: 100vh;
   box-shadow: -10px 10px rgba(48, 99, 142, 1);
+  font-size: 1.5rem;
+
   &__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centerFlex();
+    justify-content: flex-start;
+    // padding: 20px;
   }
   &__item {
-    margin-left: 30px;
+    margin-left: 35px;
     list-style: none;
     &:hover {
       cursor: pointer;
     }
   }
+  &__input {
+    height: 20px;
+    margin-left: 100px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  &__btn {
+    width: 50px;
+    background-color: transparent;
+    color: var(--white);
+  }
+  &__btn i {
+    color: var(--white);
+  }
 }
 
 // .dropdown {
-//   width: 300px;
-//   position: relative;
-//   & select {
-//     display: none;
-//   }
+//   width: 100%;
+//   border: 1px solid red;
+//   // position: relative;
 // }
+
+.products {
+  @include centerFlex();
+  flex-wrap: wrap;
+
+  &__items {
+    @include centerFlex();
+    border: 1px solid red;
+    flex-direction: column;
+    flex: 0 0 25%;
+    .item {
+      &__image {
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.pages {
+  @include centerFlex();
+  color: var(--white);
+  margin-top: 100px;
+  border: 1px solid red;
+
+  &__btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 100vh;
+    width: 80px;
+    height: 50px;
+    box-shadow: -8px 5px var(--shadow-color);
+    font-size: 30px;
+
+    &--left i {
+      transform: rotate(180deg);
+    }
+  }
+  &__counter {
+    background-color: var(--primary-color);
+    margin-right: 30px;
+    margin-left: 30px;
+    display: inline-block;
+    line-height: 50px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    border-radius: 100vh;
+    box-shadow: -8px 5px var(--shadow-color);
+  }
+}

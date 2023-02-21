@@ -8,7 +8,7 @@
       <li class="menu__item">Goggles</li>
       <li class="menu__item">All</li>
       <input type="text" class="menu__input" />
-      <button class="input__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="menu__btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
     </ul>
   </nav>
   <div class="dropdown">
@@ -22,9 +22,9 @@
   <div class="products">
     <div class="products__items" *ngFor="let product of listOfProductsService.products">
       <img src="{{ product.imagePath }}" alt="" class="item item__image" />
-      <span class="item item__category">{{ product.category }}</span>
-      <span class="item item__brand">{{ product.brandName }}</span>
-      <span class="item item__pice">{{ product.price }}$</span>
+      <span class="item item__brand">Brand: {{ product.brandName }}</span>
+      <span class="item item__pice">Price: {{ product.price }}$</span>
+      <button class="item__btn" type="button">Add to basket</button>
     </div>
   </div>
   <div class="pages">

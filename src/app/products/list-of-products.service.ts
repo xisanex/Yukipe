@@ -40,5 +40,12 @@ export class ListOfProductsService {
       brandName: 'Deska',
       price: 260,
     },
+    {
+      imagePath:
+        'https://contents.mediadecathlon.com/p2052233/k$97717df7a83d287ebc3b27225aed2d6d/sq/8602244.jpg?format=auto&f=800x0&quality=40',
+      category: 'Snowboard',
+      brandName: 'Deska',
+      price: 230,
+    },
   ];
 }
